@@ -16,15 +16,10 @@ def translate_text(pdf_path):
         text = get_text_from_jpg(page)
         language = choose_language(text)
         eng_text = eng_text + translate_2(text, language)
-    print(eng_text)
     return eng_text
 
 
 def get_file_path():
-
-    root = tk.Tk()
-    root.withdraw()
-
     file_path = filedialog.askopenfilename(filetypes=[("PDF files", "*.pdf")])
     return file_path
 
